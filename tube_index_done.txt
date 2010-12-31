@@ -1,0 +1,342 @@
+0.0218204 0.983225 Chesham
+0.064721 0.982861 Chalfont & Latimer
+0.152742 0.970146 Watford
+0.0229297 0.939739 Amersham
+0.075816 0.932552 Chorleywood
+0.140167 0.940844 Croxley
+0.0809937 0.916519 Rickmansworth
+0.142756 0.910437 Moor Park
+0.1557 0.886665 Northwood Hills
+0.113539 0.881136 Northwood
+0.0525165 0.892746 West Ruislip
+0.0332851 0.870079 Hillingdon
+0.015533 0.841883 Uxbridge
+0.0613925 0.841883 Ickenham
+0.0920887 0.86842 Ruislip
+0.127963 0.853493 Ruislip Manor
+0.132401 0.835802 EastCote
+0.103184 0.804842 Rayners Lane
+0.0639813 0.799313 Ruislip Gardens
+0.0588036 0.774988 South Ruislip
+0.0943077 0.756191 Northolt
+0.174192 0.85681 Pinner
+0.202299 0.824192 Harrow-on-the-Hill
+0.193423 0.841883 North Harrow
+0.169014 0.799313 West Harrow
+0.157549 0.754532 South Harrow
+0.109102 0.727866 Sudbury Hill
+0.105362 0.696179 Sudbury Town
+0.115337 0.671016 Alperton
+0.11409 0.55918 Park Royal
+0.109726 0.536813 North Ealing
+0.105362 0.453868 Ealing Common
+0.0193267 0.22274 Terminal 5
+0.0199501 0.290774 Terminals 1, 2, 3
+0.0679551 0.260019 Terminal 4
+0.0735661 0.301025 Hatton Cross
+0.0523691 0.343896 Hounslow West
+0.0985711 0.33314 Hounslow Central
+0.0699265 0.367774 Hounslow East
+0.112051 0.352661 Osterley
+0.0787727 0.37722 Boston Manor
+0.0901463 0.392333 Northfields
+0.107417 0.404927 South Ealing
+0.147857 0.415002 Acton Town
+0.131849 0.368404 Chiswick Park
+0.168919 0.319287 Gunnersbury
+0.170183 0.279615 Kew Gardens
+0.16597 0.239314 Richmond
+0.168498 0.37596 Turnham Green
+0.165549 0.443339 South Acton
+0.167234 0.469787 Acton Central
+0.160915 0.501272 West Acton
+0.193772 0.503791 North Acton
+0.09141 0.514496 Ealing Broadway
+0.106575 0.593209 Hanger Lane
+0.0775089 0.630992 Perivale
+0.0556042 0.704038 Greenford
+0.230453 0.79698 Northwick Park
+0.271605 0.780201 Wembley Park
+0.270483 0.824385 Preston Road
+0.393939 0.697987 Finchley Road
+0.417883 0.626957 Baker Street
+0.446315 0.631991 Great Portland Street
+0.505799 0.587808 Euston Square
+0.527871 0.662192 King's Cross St. Pancras
+0.550318 0.583333 Farringdon
+0.565282 0.558166 Barbican
+0.583614 0.540268 Moorgate
+0.65058 0.574385 Liverpool Street
+0.65058 0.480425 Aldgate
+0.802095 0.641499 Stratford
+0.857089 0.550895 West Ham
+0.861579 0.464765 Canning Town
+0.832772 0.360179 North Greenwich
+0.756453 0.381991 Canary Wharf
+0.689487 0.352349 Canada Water
+0.645342 0.354586 Bermondsey
+0.614665 0.379195 London Bridge
+0.516274 0.282438 Southwark
+0.514777 0.274049 Waterloo East
+0.451178 0.322707 Waterloo
+0.436962 0.373602 Westminster
+0.424242 0.469239 Green Park
+0.386457 0.526286 Bond Street
+0.403292 0.67226 St. John's Wood
+0.399177 0.684564 Swiss Cottage
+0.386457 0.717562 West Hampstead
+0.34942 0.750559 Kilburn
+0.348672 0.764541 Willesden Green
+0.328844 0.780761 Dollis Hill
+0.319117 0.797539 Neasden
+0.308268 0.832774 Kingsbury
+0.308642 0.848993 Queensbury
+0.308268 0.864094 Canons Park
+0.308642 0.880872 Stanmore
+0.495698 0.905481 Mill Hill East
+0.565657 0.978747 High Barnet
+0.569398 0.954698 Totteridge & Whetstone
+0.567901 0.934564 Woodside Park
+0.567153 0.914989 West Finchley
+0.563038 0.893177 Finchley Central
+0.563412 0.86745 East Finchley
+0.561541 0.839485 Highgate
+0.560793 0.818792 Archway
+0.566405 0.798098 Tufnell Park
+0.552937 0.760067 Kentish Town
+0.34942 0.912192 Edgeware
+0.369622 0.887584 Burnt Oak
+0.377853 0.86689 Colindale
+0.379723 0.850112 Hendon Central
+0.40404 0.827181 Brent Cross
+0.414516 0.807606 Golders Green
+0.429106 0.788031 Hampstead
+0.459783 0.744966 Belsize Park
+0.474747 0.72651 Chalk Farm
+0.479237 0.697987 Camden Town
+0.478863 0.670022 Mornington Crescent
+0.474747 0.630872 Euston
+0.459783 0.591723 Warren Street
+0.468762 0.538031 Goodge Street
+0.465021 0.501119 Tottenham Court Road
+0.498316 0.455257 Leicester Square
+0.500935 0.428412 Charing Cross
+0.51141 0.370805 Embankment
+0.438833 0.447427 Piccadilly Circus
+0.420501 0.529083 Oxford Circus
+0.444819 0.578859 Regent's Park
+0.502432 0.524049 Holborn
+0.535728 0.561521 Russell Square
+0.541713 0.532438 Chancery Lane
+0.51777 0.488255 Covent Garden
+0.574261 0.631432 Angel
+0.617658 0.60123 Old Street
+0.576132 0.50783 St. Paul's
+0.590348 0.496085 Bank
+0.620651 0.440157 Monument
+0.655069 0.43736 Tower Hill
+0.570146 0.46868 Cannon Street
+0.551814 0.416667 Blackfriars
+0.532361 0.39094 Temple
+0.421998 0.403244 St. James's Park
+0.391695 0.373043 Victoria
+0.383464 0.401566 Sloane Square
+0.347924 0.369687 South Kensington
+0.332211 0.412752 Gloucester Road
+0.358399 0.435682 Knightsbridge
+0.377853 0.463647 Hyde Park Corner
+0.378975 0.502796 Marble Arch
+0.36214 0.530761 Lancaster Gate
+0.348298 0.502237 Queensway
+0.329218 0.528523 Notting Hill Gate
+0.331837 0.553132 Bayswater
+0.333333 0.581096 Edgeware Road
+0.368874 0.585011 Marylebone
+0.350917 0.626398 Edgeware Road
+0.304527 0.603468 Paddington
+0.296296 0.528523 Holland Park
+0.276094 0.502237 Shepherd's Bush
+0.216611 0.458613 Shepherd's Bush Market
+0.220726 0.486018 Wood Lane
+0.22746 0.530761 White City
+0.217733 0.549776 Latimer Road
+0.263 0.563199 Ladbroke Grove
+0.236813 0.602349 Westbourne Park
+0.253648 0.615772 Royal Oak
+0.237561 0.627517 Warwick Avenue
+0.234194 0.637025 Kilburn Park
+0.279461 0.644295 Maida Vale
+0.204265 0.532998 East Acton
+0.210625 0.428971 Goldhawk Road
+0.214366 0.404922 Hammersmith
+0.332959 0.467002 High Street Kensington
+0.303779 0.369128 Earl's Court
+0.264123 0.436801 Kensington (Olympia)
+0.267116 0.411074 Barons Court
+0.271231 0.369687 West Kensington 
+0.228956 0.369128 Ravenscourt Park
+0.258137 0.342841 West Brompton
+0.307146 0.321029 Fulham Broadway
+0.265245 0.293065 Parsons Green
+0.265245 0.277405 Putney Bridge
+0.389824 0.28132 Pimlico
+0.270483 0.243289 East Putney
+0.270483 0.209732 Southfields
+0.26936 0.177852 Wimbledon Park
+0.271231 0.149329 Wimbledon
+0.365133 0.174497 Clapham Junction
+0.398055 0.214765 Vauxhall
+0.464646 0.207494 Kennington
+0.486719 0.161074 Oval
+0.478489 0.143736 Stockwell
+0.496446 0.115213 Brixton
+0.420501 0.134787 Clapham North
+0.464646 0.104027 Clapham Common
+0.401422 0.105705 Clapham South
+0.433221 0.0810962 Balham
+0.388702 0.0771812 Tooting Bec
+0.428358 0.0514541 Tooting Broadway
+0.371493 0.057047 Colliers Wood
+0.410774 0.0307606 South Wimbledon
+0.358773 0.0251678 Morden
+0.506547 0.254474 Lambeth North
+0.527497 0.213087 Elephant & Castle
+0.566779 0.279083 Borough
+0.681257 0.322148 Surrey Quays
+0.718294 0.215884 New Cross
+0.653199 0.233221 New Cross Gate
+0.747101 0.166107 Lewisham
+0.760569 0.180649 Elverson Road
+0.775533 0.197987 Deptford Bridge
+0.780022 0.213087 Greenwich
+0.79798 0.234899 Cutty Sark
+0.765432 0.272371 Island Gardens
+0.768799 0.288591 Mudchute
+0.768051 0.305928 Crossharbour
+0.768051 0.324944 South Quay
+0.763187 0.345638 Heron Quays
+0.801721 0.41387 West India Quay
+0.733633 0.416667 Wapping
+0.737374 0.442953 Limehouse
+0.73064 0.473154 Shadwell
+0.760195 0.465324 Westferry
+0.790123 0.466443 Poplar
+0.805088 0.443512 Blackwall
+0.793116 0.482103 All Saints
+0.821175 0.469799 East India
+0.800973 0.498881 Langdon Park
+0.799476 0.517338 Devons Road
+0.735877 0.50783 Whitechapel
+0.74523 0.529083 Stepney Green
+0.687991 0.506711 Aldgate East
+0.714927 0.566555 Shoreditch
+0.701085 0.592282 Bethnal Green
+0.755331 0.587808 Mile End
+0.695847 0.388143 Rotherhithe
+0.91171 0.454698 Royal Victoria
+0.924055 0.437919 Custom House
+0.870183 0.41387 West Silvertown
+0.936027 0.41443 Prince Regent
+0.94538 0.397651 Royal Albert
+0.957351 0.380872 Beckton Park
+0.961841 0.365213 Cyprus
+0.977927 0.347315 Gallions Reach
+0.979424 0.310962 Beckton
+0.946502 0.271812 King George V
+0.940142 0.191275 Woolwich Arsenal
+0.934156 0.314877 London City Airport
+0.901609 0.364094 Pontoon Dock
+0.769547 0.546421 Bow Road
+0.793865 0.540268 Bow Church
+0.822671 0.547539 Bromley-by-Bow
+0.87168 0.563758 Plaistow
+0.883651 0.579418 Upton Park
+0.897493 0.603468 East Ham
+0.908717 0.622483 Barking
+0.91994 0.634787 Upney
+0.934156 0.649329 Becontree
+0.944632 0.667785 Dagenham Heathway
+0.921811 0.711969 Dagenham East
+0.963711 0.701342 Elm Park
+0.973438 0.713087 Hornchurch
+0.956603 0.758389 Upminster Bridge
+0.96633 0.772371 Upminster
+0.819678 0.583893 Pudding Mill Lane
+0.814067 0.688479 Leyton
+0.811074 0.738814 Leytonstone
+0.813692 0.774609 Snaresbrook
+0.818556 0.816555 South Woodford
+0.817434 0.848434 Woodford
+0.854845 0.894855 Roding Valley
+0.888889 0.888702 Chigwell
+0.883277 0.857942 Grange Hill
+0.884774 0.841723 Hainault
+0.888141 0.823266 Fairlop
+0.878788 0.805369 Barkingside
+0.876543 0.787472 Newbury Park
+0.864946 0.77349 Redbridge
+0.884774 0.748322 Gants Hill
+0.8526 0.752796 Wanstead
+0.86719 0.666107 Woodgrange Park
+0.868313 0.690716 Wanstead Park
+0.854097 0.719239 Leytonstone High Road
+0.809577 0.716443 Leyton Midland Road
+0.760943 0.772931 Walthamstow Queen's Road
+0.758698 0.635906 Hackney Wick
+0.746727 0.668904 Homerton
+0.735503 0.686801 Hackney Central
+0.722409 0.709732 Dalston Kingsland
+0.678264 0.697427 Canonbury
+0.768799 0.796421 Walthamstow Central
+0.750468 0.831655 Blackhorse Road
+0.736251 0.85179 South Tottenham
+0.71792 0.797539 Tottenham Hale
+0.695847 0.860738 Harringay Green Lanes
+0.69697 0.826063 Seven Sisters
+0.682005 0.782438 Finsbury Park
+0.648335 0.720358 Highbury & Islington
+0.644968 0.986018 Cockfosters
+0.648335 0.965324 Oakwood
+0.646465 0.939038 Southgate
+0.645716 0.911074 Arnos Grove
+0.646091 0.884787 Bounds Green
+0.645716 0.868568 Wood Green
+0.646091 0.852349 Turnpike Lane
+0.645342 0.818233 Manor House
+0.598578 0.835011 Crouch Hill
+0.609428 0.787472 Upper Holloway
+0.625514 0.768456 Arsenal
+0.61055 0.750559 Holloway Road
+0.586607 0.728188 Caledonian Road
+0.614665 0.694631 Caledonian Road & Barnsbury
+0.544706 0.715884 Camden Road
+0.51141 0.807606 Gospel Oak
+0.510288 0.753356 Kentish Town West
+0.480359 0.794183 Hampstead Heath
+0.414516 0.756152 Finchley Road & Frognal
+0.342686 0.667226 South Hampstead
+0.320614 0.694631 Brondesbury
+0.309016 0.667226 Kilburn High Road
+0.300037 0.722595 Brondesbury Park
+0.277965 0.693512 Kensal Rise
+0.26749 0.668345 Queen's Park
+0.267864 0.682886 Kensal Green
+0.218107 0.715884 Willesden Junction
+0.232323 0.725951 Harlesden
+0.224841 0.737136 Stonebridge Park
+0.223345 0.75 Wembley Central
+0.224467 0.762864 North Wembley
+0.226337 0.776846 South Kenton
+0.267116 0.845638 Kenton
+0.229704 0.86689 Harrow & Wealdstone
+0.228208 0.881432 Headstone Lane
+0.236064 0.897092 Hatch End
+0.274598 0.920582 Carpenders Park
+0.266367 0.943512 Bushey
+0.27572 0.961969 Watford High Street
+0.274972 0.982103 Watford Junction
+0.802095 0.912752 Buckhurst Hill
+0.824916 0.945749 Loughton
+0.860456 0.942953 Debden
+0.875047 0.959172 Theydon Bois
+0.880658 0.982103 Epping
