@@ -57,7 +57,7 @@
 
 <target name="run" depends="dist">
   <exec executable="${wtkBase}/bin/emulator">
-    <arg line="-Xdescriptor:${dist}/${program_name}.jad"/>
+    <arg line="-Xdomain:maximum -Xdescriptor:${dist}/${program_name}.jad"/>
   </exec>
 </target>
 
