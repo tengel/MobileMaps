@@ -21,7 +21,7 @@
 
 <target name="compile">
   <mkdir dir="${build}/classes"/>
-  <javac destdir="build/classes" srcdir="src" />
+  <javac includeAntRuntime="false" debug="true" destdir="build/classes" srcdir="src" />
 </target>
 
 
