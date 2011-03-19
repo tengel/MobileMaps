@@ -1,8 +1,13 @@
 #!/usr/bin/python
 
+import sys
 from xml.dom import pulldom
 
-doc = pulldom.parse("england.osm")
+if len(sys.argv) < 2:
+        print "usage: %s FILE" % sys.argv[0]
+        sys.exit(2)
+
+doc = pulldom.parse(sys.argv[1])
 #outFile = open("england.txt", "w")
 
 nodes = {}
@@ -10,7 +15,6 @@ ways = {}
 pubs = []
 atms = []
 
-i = 0
 for event, node in doc:
 	if event == pulldom.START_ELEMENT:
 		if node.localName == "node":
@@ -45,18 +49,23 @@ for event, node in doc:
 			wayName = name.encode("latin-1", "replace")
 			refList = [nd.getAttribute("ref") for nd in node.getElementsByTagName("nd")]
 			
-			if ways.has_key(wayName):
-				ways[wayName].append([int(x) for x in refList])
-			else:
-				ways[wayName] = [int(x) for x in refList]
-		
-		i = i + 1
-		if i % 100 == 0:
-			print(i / 100)
+                        if not ways.has_key(wayName):
+                                ways[wayName] = []
+                                
+                        for x in refList:
+                                ways[wayName].append(int(x))
+
 				
-print(nodes)
-print(ways)
-print(pubs)
-print(atms)
-		
-#outFile.close()
+nodestxt = open("nodes.txt", 'w')
+for n in nodes:
+        s = "%d %f %f\n" % (n, nodes[n][1], nodes[n][0])
+        nodestxt.write(s)
+nodestxt.close()
+
+waystxt = open("ways.txt", 'w')
+for w in ways:
+        waystxt.write(w)
+        waystxt.write("\n")
+        waystxt.write(str(ways[w])[1:-1])
+        waystxt.write("\n")
+waystxt.close()
