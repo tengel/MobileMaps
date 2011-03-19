@@ -1,16 +1,4 @@
 #!/usr/bin/perl
-
-# configure here:
-# first top left (north west)
-my $startlon = 13.3;
-my $startlat = 52.58;
-# then bottom right (south east)
-my $endlon = 13.5;
-my $endlat = 52.45;
-#zoom level:
-my $zoom = 14; # 16;
-# end of configuration
-
 use strict;
 use LWP;
 use GD;
@@ -22,6 +10,21 @@ sub getTileNumber {
   my $ytile = int( (1 - log(tan(deg2rad($lat)) + sec(deg2rad($lat)))/pi)/2 *2**$zoom ) ;
   return ($xtile, $ytile);
 }
+
+if (scalar(@ARGV) < 5)
+{
+    print "usage: WEST NORTH EAST SOUTH ZOOM\r\n";
+    exit(2);
+}
+
+# first top left (north west)
+my $startlon = $ARGV[0];
+my $startlat = $ARGV[1];
+# then bottom right (south east)
+my $endlon = $ARGV[2];
+my $endlat = $ARGV[3];
+#zoom level:
+my $zoom = $ARGV[4];
 
 (my $xstart, my $ystart) = getTileNumber($startlat, $startlon, $zoom);
 (my $xend, my $yend) = getTileNumber($endlat, $endlon, $zoom);
