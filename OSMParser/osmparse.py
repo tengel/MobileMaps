@@ -46,7 +46,7 @@ for event, node in doc:
 			if name == "":
 				continue;
 				
-			wayName = name.encode("latin-1", "replace")
+			wayName = name.encode("utf-8", "replace")
 			refList = [nd.getAttribute("ref") for nd in node.getElementsByTagName("nd")]
 			
                         if not ways.has_key(wayName):
