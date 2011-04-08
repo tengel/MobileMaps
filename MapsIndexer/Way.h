@@ -11,9 +11,9 @@ class Way
 public:
 	Way();
 	
-	void addNode(GridRef r);
+	void addNode(LatLong r);
 	
-	GridRef averagePosition() const;
+	LatLong averagePosition() const;
 	
 	// Used to decide if this is actuall two roads with the same name.
 	// We assume there aren't three roads of the same name in london.
@@ -27,13 +27,13 @@ public:
 	
 	// Get the average position of the most southerly/westerly nodes, assuming
 	// that this is actually two roads.
-	GridRef getSouthOrWestAveragePosition() const;
+	LatLong getSouthOrWestAveragePosition() const;
 	
 	// Get the average position of the most northerly/easterly nodes, assuming
 	// that this is actually two roads.
-	GridRef getNorthOrEastAveragePosition() const;
+	LatLong getNorthOrEastAveragePosition() const;
 	
 	int numNodes() const;
 private:
-	vector<GridRef> nodes;
+	vector<LatLong> nodes;
 };

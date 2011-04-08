@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
 	ifstream nodes(nodesFileName.c_str());
 	ifstream ways(waysFileName.c_str());
 	
-	map<int, GridRef> nodeMap;
+	map<int, LatLong> nodeMap;
 	
 	if (!nodes)
 	{
@@ -50,18 +50,19 @@ int main(int argc, char* argv[])
 		double lat = 0.0;
 		
 		nodes >> idx >> lon >> lat;
-		
-		GridRef r = LatLongToGridRef(LatLong(lat, lon));
+
+		LatLong ll = LatLong(lat, lon);
 		
 		if (++i % 1000 == 0)
 			cout << i/1000 << endl;
 		
 		if (idx != -1)
 		{
-			if (r.easting >= eastMin && r.easting <= eastMax && r.northing >= northMin && r.northing <= northMax)
-			{
-				nodeMap[idx] = r;
-			}
+                    if (lon >= eastMin && lon <= eastMax &&
+                        lat >= northMin && lat <= northMax)
+                    {
+				nodeMap[idx] = ll;
+                    }
 		}
 	}
 	
@@ -78,8 +79,8 @@ int main(int argc, char* argv[])
 		
 		string nds;
 		std::getline(ways, nds);
-		
-		vector<string> nds_split = Split(nds, " ");
+
+		vector<string> nds_split = Split(nds, ",");
 		
 		for (int i = 0; i < nds_split.size(); ++i)
 		{
@@ -90,7 +91,7 @@ int main(int argc, char* argv[])
 			}
 		}
 	}
-	
+
 	for (map<string, Way>::const_iterator i = wayMap.begin(); i != wayMap.end(); ++i)
 	{
 		if (i->second.radius() > 5000) // 5 km I think.
@@ -98,19 +99,23 @@ int main(int argc, char* argv[])
 			// Assume it is two roads.
 			bool isTall = i->second.isTall();
 			
-			GridRef r1 = i->second.getSouthOrWestAveragePosition();
-			GridRef r2 = i->second.getNorthOrEastAveragePosition();
+			LatLong r1 = i->second.getSouthOrWestAveragePosition();
+			LatLong r2 = i->second.getNorthOrEastAveragePosition();
 			
-			idx.add(i->first + (isTall ? " (south)" : " (west)"), 0xFFFF * (r1.easting - eastMin) / (eastMax - eastMin),
-					0xFFFF * (r1.northing - northMin) / (northMax - northMin));
-			idx.add(i->first + (isTall ? " (north)" : " (east)"), 0xFFFF * (r2.easting - eastMin) / (eastMax - eastMin),
-					0xFFFF * (r2.northing - northMin) / (northMax - northMin));
+			idx.add(i->first + (isTall ? " (south)" : " (west)"),
+                                0xFFFF * (r1.longitude - eastMin) / (eastMax - eastMin),
+				0xFFFF * (r1.latitude - northMin) / (northMax - northMin));
+                        
+			idx.add(i->first + (isTall ? " (north)" : " (east)"),
+                                0xFFFF * (r2.longitude - eastMin) / (eastMax - eastMin),
+				0xFFFF * (r2.latitude - northMin) / (northMax - northMin));
 		}
 		else
 		{
-			GridRef r = i->second.averagePosition();
-			idx.add(i->first, 0xFFFF * (r.easting - eastMin) / (eastMax - eastMin),
-					0xFFFF * (r.northing - northMin) / (northMax - northMin));
+			LatLong ll = i->second.averagePosition();
+			idx.add(i->first,
+                                0xFFFF * (ll.longitude - eastMin) / (eastMax - eastMin),
+				0xFFFF * (ll.latitude - northMin) / (northMax - northMin));
 		}
 	}
 	

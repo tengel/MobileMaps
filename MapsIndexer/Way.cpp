@@ -4,20 +4,20 @@ Way::Way()
 {
 }
 
-void Way::addNode(GridRef r)
+void Way::addNode(LatLong r)
 {
 	nodes.push_back(r);
 }
 
-GridRef Way::averagePosition() const
+LatLong Way::averagePosition() const
 {
 	double easting = 0.0;
 	double northing = 0.0;
 	int denom = 0;
 	for (int i = 0; i < nodes.size(); ++i)
 	{
-		easting += nodes[i].easting;
-		northing += nodes[i].northing;
+		easting += nodes[i].longitude;
+		northing += nodes[i].latitude;
 		++denom;
 	}
 	if (denom != 0)
@@ -25,7 +25,7 @@ GridRef Way::averagePosition() const
 		easting /= denom;
 		northing /= denom;
 	}
-	return GridRef(easting, northing);
+	return LatLong(northing, easting);
 }
 
 // Used to decide if this is actuall two roads with the same name.
@@ -36,19 +36,19 @@ double Way::radius() const
 	if (nodes.empty())
 		return 0.0;
 	double minX, minY, maxX, maxY;
-	minX = maxX = nodes[0].easting;
-	minY = maxY = nodes[0].northing;
+	minX = maxX = nodes[0].longitude;
+	minY = maxY = nodes[0].latitude;
 
 	for (unsigned int i = 0; i < nodes.size(); ++i)
 	{
-		if (nodes[i].easting < minX)
-			minX = nodes[i].easting;
-		else if (nodes[i].easting > maxX)
-			maxX = nodes[i].easting;
-		if (nodes[i].northing < minY)
-			minY = nodes[i].northing;
-		else if (nodes[i].northing > maxY)
-			maxY = nodes[i].northing;
+		if (nodes[i].longitude < minX)
+			minX = nodes[i].longitude;
+		else if (nodes[i].longitude > maxX)
+			maxX = nodes[i].longitude;
+		if (nodes[i].latitude < minY)
+			minY = nodes[i].latitude;
+		else if (nodes[i].latitude > maxY)
+			maxY = nodes[i].latitude;
 	}
 
 	double dx = maxX - minX;
@@ -65,19 +65,19 @@ bool Way::isTall() const
 	if (nodes.empty())
 		return false;
 	double minX, minY, maxX, maxY;
-	minX = maxX = nodes[0].easting;
-	minY = maxY = nodes[0].northing;
+	minX = maxX = nodes[0].longitude;
+	minY = maxY = nodes[0].latitude;
 
 	for (unsigned int i = 0; i < nodes.size(); ++i)
 	{
-		if (nodes[i].easting < minX)
-			minX = nodes[i].easting;
-		else if (nodes[i].easting > maxX)
-			maxX = nodes[i].easting;
-		if (nodes[i].northing < minY)
-			minY = nodes[i].northing;
-		else if (nodes[i].northing > maxY)
-			maxY = nodes[i].northing;
+		if (nodes[i].longitude < minX)
+			minX = nodes[i].longitude;
+		else if (nodes[i].longitude > maxX)
+			maxX = nodes[i].longitude;
+		if (nodes[i].latitude < minY)
+			minY = nodes[i].latitude;
+		else if (nodes[i].latitude > maxY)
+			maxY = nodes[i].latitude;
 	}
 
 	return (maxX - minX) > (maxY - minY);		
@@ -85,83 +85,83 @@ bool Way::isTall() const
 
 // Get the average position of the most southerly/westerly nodes, assuming
 // that this is actually two roads.
-GridRef Way::getSouthOrWestAveragePosition() const
+LatLong Way::getSouthOrWestAveragePosition() const
 {
 	if (nodes.empty())
 		return false;
 	double minX, minY, maxX, maxY;
-	minX = maxX = nodes[0].easting;
-	minY = maxY = nodes[0].northing;
+	minX = maxX = nodes[0].longitude;
+	minY = maxY = nodes[0].latitude;
 
 	for (unsigned int i = 0; i < nodes.size(); ++i)
 	{
-		if (nodes[i].easting < minX)
-			minX = nodes[i].easting;
-		else if (nodes[i].easting > maxX)
-			maxX = nodes[i].easting;
-		if (nodes[i].northing < minY)
-			minY = nodes[i].northing;
-		else if (nodes[i].northing > maxY)
-			maxY = nodes[i].northing;
+		if (nodes[i].longitude < minX)
+			minX = nodes[i].longitude;
+		else if (nodes[i].longitude > maxX)
+			maxX = nodes[i].longitude;
+		if (nodes[i].latitude < minY)
+			minY = nodes[i].latitude;
+		else if (nodes[i].latitude > maxY)
+			maxY = nodes[i].latitude;
 	}
 
 	bool isTall = (maxX - minX) > (maxY - minY);
 
 	int n = 0;
-	GridRef r;
+	LatLong r;
 	for (unsigned int i = 0; i < nodes.size(); ++i)
 	{
-		if ((!isTall && nodes[i].easting < (maxX + minX)/2)
-				|| (isTall && nodes[i].northing < (maxY + minY)/2))
+		if ((!isTall && nodes[i].longitude < (maxX + minX)/2)
+				|| (isTall && nodes[i].latitude < (maxY + minY)/2))
 		{
 			++n;
-			r.easting += nodes[i].easting;
-			r.northing += nodes[i].northing;
+			r.longitude += nodes[i].longitude;
+			r.latitude += nodes[i].latitude;
 		}
 	}
-	r.easting /= n;
-	r.northing /= n;
+	r.longitude /= n;
+	r.latitude /= n;
 	return r;
 }
 
 // Get the average position of the most northerly/easterly nodes, assuming
 // that this is actually two roads.
-GridRef Way::getNorthOrEastAveragePosition() const
+LatLong Way::getNorthOrEastAveragePosition() const
 {
 	if (nodes.empty())
 		return false;
 	double minX, minY, maxX, maxY;
-	minX = maxX = nodes[0].easting;
-	minY = maxY = nodes[0].northing;
+	minX = maxX = nodes[0].longitude;
+	minY = maxY = nodes[0].latitude;
 
 	for (unsigned int i = 0; i < nodes.size(); ++i)
 	{
-		if (nodes[i].easting < minX)
-			minX = nodes[i].easting;
-		else if (nodes[i].easting > maxX)
-			maxX = nodes[i].easting;
-		if (nodes[i].northing < minY)
-			minY = nodes[i].northing;
-		else if (nodes[i].northing > maxY)
-			maxY = nodes[i].northing;
+		if (nodes[i].longitude < minX)
+			minX = nodes[i].longitude;
+		else if (nodes[i].longitude > maxX)
+			maxX = nodes[i].longitude;
+		if (nodes[i].latitude < minY)
+			minY = nodes[i].latitude;
+		else if (nodes[i].latitude > maxY)
+			maxY = nodes[i].latitude;
 	}
 
 	bool isTall = (maxX - minX) > (maxY - minY);
 
 	int n = 0;
-	GridRef r;
+	LatLong r;
 	for (unsigned int i = 0; i < nodes.size(); ++i)
 	{
-		if ((!isTall && nodes[i].easting >= (maxX + minX)/2)
-				|| (isTall && nodes[i].northing >= (maxY + minY)/2))
+		if ((!isTall && nodes[i].longitude >= (maxX + minX)/2)
+				|| (isTall && nodes[i].latitude >= (maxY + minY)/2))
 		{
 			++n;
-			r.easting += nodes[i].easting;
-			r.northing += nodes[i].northing;
+			r.longitude += nodes[i].longitude;
+			r.latitude += nodes[i].latitude;
 		}
 	}
-	r.easting /= n;
-	r.northing /= n;
+	r.longitude /= n;
+	r.latitude /= n;
 	return r;
 }
 
