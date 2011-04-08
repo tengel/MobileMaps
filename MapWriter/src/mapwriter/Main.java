@@ -96,7 +96,6 @@ public class Main
                 for (int y = 0; y < largeTilesY; ++y)
                 {
                     ByteArrayOutputStream tile = new ByteArrayOutputStream();
-                    System.out.println("x=" + x *tileSize + " y=" + y * tileSize);
                     ImageIO.write(largeImage.getSubimage(x * tileSize, y * tileSize, tileSize, tileSize), "png", tile);
                     f.AppendFile(tile.toByteArray());
                 }
