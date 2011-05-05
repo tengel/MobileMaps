@@ -1,9 +1,0 @@
-MIDlet-1: Tube Map, logo.png, MapApp
-MIDlet-Description: Central London Tube Map
-MIDlet-Icon: /logo.png
-MIDlet-Info-URL: http://tdhutt.googlepages.com/
-MIDlet-Name: Tube Map
-MIDlet-Vendor: Tim Hutt
-MIDlet-Version: 1.1
-MicroEdition-Configuration: CLDC-1.1
-MicroEdition-Profile: MIDP-2.0
