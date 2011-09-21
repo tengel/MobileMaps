@@ -1,13 +1,23 @@
-Map - I think this is the latest source for the Mobile London Street Map midlet.
+Map
+    The Java ME Mobile Map application. Originally created for London maps.
 
-MapMaker - This was a Qt program I was working on (actually basically finished) that lets you easily convert an image file into a midlet that is like the Tube Map midlet. tube_index_done.txt is for this.
 
-MapTemplate - This is the template midlet for MapMaker. Basically MapMaker takes this midlet, and adds the map tiles and index file into the .jar.
+OSMParser
+    Python script to create nodes.txt and ways.txt from an .osm file. The scipt
+    is not able to work on large files. You should use osmosis to create a small
+    .osm file for your area from the large planet.osm.
 
-Metro Maps - Some PDFs and images that I was going to turn into midlets, but never did - it would be great if you could!
+MapsIndexer
+    This C++ program creates a .dat file containing the street index from the
+    previously generated nodes.txt and ways.txt.
+    To build it, it should be sufficient to run 'make' in the MapsIndexer
+    directory.
 
-TubeMaps - This is the old source code for when I created all the Tube and Bus map midlets separately, instead of using MapMaker.
+MapWriter
+    This is a Java application. It combines the priviously generated index file
+    (.dat) and the images for the overview and detailed map to a .mapth file.
+    This file has to downloaded to the phone.
+    Run 'ant compile' to build MapWriter.
 
-MapsIndexer, MapWriter, OSMParser - I used these somehow to make the .mapth files. Somehow. Street Map Readme.txt has old instructions. I was working on an ATM layer but never finished that. Also I think the streetmap.co.uk website has changed so you'll have to rewrite the thing that downloads all the tiles.
-
-StreetmapCreator - This was an unfinished Qt program I was working on that would let you select an area of the UK, and then download streetmap.co.uk tiles and turn then into a .mapth file.
+createmap.sh
+    A simple bash script which performs all the steps to create a map.
