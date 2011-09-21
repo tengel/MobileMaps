@@ -52,5 +52,6 @@ for (my $x=$xstart;$x<=$xend;$x++) {
     $img->copy($tile, ($x-$xstart)*256,($y-$ystart)*256,0,0,256,256);
   }
 }
+$img->trueColorToPalette(0, 255);
 binmode STDOUT;
-print $img->png();
+print $img->png(9);
